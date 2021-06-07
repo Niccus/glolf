@@ -118,7 +118,7 @@ class Course:
                 if x == len(terrain):
                     terrain.append([])
                 if tileEmoji == "⛳":
-                    self.course_objects.append(entities.Hole(self.game,position=[x,y]))     
+                    self.course_objects.append(entities.Hole(self.game,position=[x+0.5,y+0.5]))     
                     self.num_holes += 1  
                     tileEmoji = "🟩"
                 if tileEmoji == "💥":
