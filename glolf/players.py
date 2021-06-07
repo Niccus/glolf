@@ -119,7 +119,7 @@ class Player:
 
     def precision_rating(self):
         # +pettability + splortsmanship +tentacles
-        rating_number = (self.stlats.needlethreadableness*0.5 + self.stlats.finesse + self.stlats.estimation*0.2) * 5/(1+0.2+0.5) - abs(self.stlats.left_handedness)
+        rating_number = ((1 - self.stlats.needlethreadableness)*0.5 + self.stlats.finesse + self.stlats.estimation*0.2) * 5/(1+0.2+0.5) - abs(self.stlats.left_handedness)
         return format_stlat_display(rating_number)
 
     def aerodynamics_rating(self):
@@ -238,7 +238,7 @@ known_players = {
         nyoomability = 1.5,
         musclitude=1,
         finesse=1,
-        needlethreadableness=1,
+        needlethreadableness=0,
         polkadottedness=1,  
         left_handedness= 0,
         estimation=1,
